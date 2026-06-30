@@ -3,9 +3,13 @@
 \usepackage[utf8]{inputenc}
 \usepackage{cmap}
 \usepackage[english]{babel}
-\usepackage[left=0.4in,top=0.4in,right=0.4in,bottom=0.4in]{geometry}
+\usepackage[left=0.4in,top=0.3in,right=0.4in,bottom=0.3in]{geometry}
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+
+\def\sectionskip{\smallskip} % tighter spacing between sections to fit one page
+\def\sectionlineskip{\smallskip}
+\linespread{0.97}
 
 \name{Maksim Kiryakin}
 \address{+7 (916) 344-6061 \\ Russia, Moscow}
@@ -18,15 +22,20 @@
 \begin{document}
 
 	\begin{rSection}{Summary}
-		Data Scientist who ships ML at scale. Built and productionized a clustering pipeline over
-		\textbf{120M+ customer profiles} on PySpark and deployed NPV models that drive real
-		product-pricing decisions in a top-3 national bank. Strong in Python, SQL, and distributed
-		data processing, with an MSc in Computational Mathematics from Moscow State University.
+		Data Scientist specializing in \textbf{tabular ML and causal inference / econometrics} for
+		fintech, who ships models to production at scale. Built and productionized a clustering
+		pipeline over \textbf{120M+ customer profiles} on PySpark and deployed boosting and
+		econometric NPV/LTV models that drive product-pricing decisions in a top-3 national bank,
+		with monitoring and retraining. Strong mathematical foundation --- MSc in Computational
+		Mathematics, Lomonosov Moscow State University.
 	\end{rSection}
 
 	\begin{rSection}{Education}
 		\textbf{Lomonosov Moscow State University (Master's degree)} \hfill {September 2024 - June 2026}\\
-		Faculty of Computational Mathematics and Cybernetics (\textit{GPA:} 4.4/5).\\
+		Faculty of Computational Mathematics and Cybernetics (\textit{GPA:} 4.4/5).
+		Thesis: dynamic credit-portfolio management --- Merton PD, econometric forecasting,
+		portfolio optimization, backtesting
+		(\href{https://github.com/MaximKiryakin/credit-portfolio-management}{GitHub}).\\
 		\textbf{Lomonosov Moscow State University (Bachelor's degree)} \hfill {September 2020 - June 2024}\\
 		Faculty of Computational Mathematics and Cybernetics (\textit{GPA:} 4.3/5).
 	\end{rSection}
@@ -38,13 +47,15 @@
 		\begin{itemize}
 			\itemsep -3pt {}
 			\item Built and productionized a PySpark clustering pipeline segmenting \textbf{120M+ customer
-			profiles}, running on a Hadoop cluster and refreshed on schedule with no manual intervention.
-			\item Shipped ML and econometric NPV models to production that now drive product-pricing and
-			investment decisions; designed the monitoring, retraining, and business-acceptance process so
-			stakeholders rely on the outputs directly.
-			\item Designed and piloted a new product-economics metric for the directorate, defining it from
-			scratch and validating it with statistical experiments before adoption by the team.
-			\item Stack: Python (PySpark, Pandas, Scikit-learn), SQL, Hive, Git.
+			profiles} on a Hadoop cluster, replacing manual segmentation; it refreshes on schedule with no
+			manual intervention.
+			\item Shipped gradient-boosting and econometric \textbf{NPV/LTV models} to production --- raising
+			estimation accuracy by \textbf{15\%} --- that now drive product-pricing and investment decisions;
+			designed the monitoring, retraining, and business-acceptance process so stakeholders rely on the
+			outputs directly.
+			\item Designed and piloted a new LTV-based product-economics metric for the directorate, defining
+			it from scratch and validating it with statistical experiments and A/B testing before adoption.
+			\item Stack: Python (PySpark, Pandas, Scikit-learn, PyTorch), SQL, Hive, Git.
 		\end{itemize}
 
 		\textbf{Sber} \hfill {August 2023 - March 2024}\\
@@ -67,7 +78,8 @@
 		\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l }
 			Languages: & Python, SQL, C/C++ \\
 			ML \& Data: & PySpark, Scikit-learn, PyTorch, Pandas, NumPy, SciPy, Hive, Hadoop \\
-			ML methods: & Clustering, time-series, feature engineering, econometrics, A/B testing \\
+			Tabular ML: & Gradient boosting, feature engineering, validation \& calibration, clustering \\
+			Causal \& stats: & Causal inference, A/B testing, econometrics, time-series \\
 			Production: & End-to-end pipelines, model deployment, monitoring \& retraining, Git
 		\end{tabular}\\
 	\end{rSection}
